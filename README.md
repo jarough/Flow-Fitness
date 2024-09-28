@@ -23,3 +23,7 @@ user stories
 * can login
 * can browse equipment store
 * can view profile
+
+technologies
+* bootstrap 4.6
+* 
