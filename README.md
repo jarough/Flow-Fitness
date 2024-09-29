@@ -27,3 +27,6 @@ user stories
 technologies
 * bootstrap 4.6
 * 
+
+code
+* https://getbootstrap.com/docs/4.6/getting-started/introduction/
