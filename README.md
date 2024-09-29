@@ -26,7 +26,12 @@ user stories
 
 technologies
 * bootstrap 4.6
-* 
+* python 3.8.6
+* django
+* javascript
+* css
+* html
 
 code
 * https://getbootstrap.com/docs/4.6/getting-started/introduction/
+* boutique ado walkthrough project

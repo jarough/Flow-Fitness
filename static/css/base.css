@@ -32,6 +32,10 @@ body {
     color: black !important;
 }
 
+.bg-black {
+    background: black !important;
+}
+
 .border-black {
     border: 2px solid black !important;
 }
