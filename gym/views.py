@@ -1,23 +1,7 @@
 from django.shortcuts import render, HttpResponse
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
+from django.contrib.auth.mixins import LoginRequiredMixin
 from . import models
-
-equipment = [
-    {
-        'id': '22102',
-        'name': 'Rowing Machine',
-        'price': '£100'
-    },
-    {
-        'id': '22103',
-        'name': 'Weights',
-        'price': '£20'
-    },
-    {
-        'id': '22104',
-        'name': 'Skipping Ropes',
-        'price': '£10'
-    }
-]
 
 # Create your views here.
 def home(request):
@@ -26,6 +10,32 @@ def home(request):
         'equipment': equipment
     }
     return render(request, "gym/home.html", context)
+
+class EquipmentListView(ListView):
+    model = models.Equipment
+    template_name = 'gym/home.html'
+    context_object_name = 'equipment'
+
+
+class EquipmentDetailView(DetailView):
+    model = models.Equipment
+
+
+class EquipmentCreateView(LoginRequiredMixin, CreateView):
+    model = models.Equipment
+    fields = "__all__"
+
+    def valid_form(self, form):
+        form.instance.author = self.request.user
+        return super().valid_form(form)
+
+class EquipmentUpdateView(LoginRequiredMixin, UpdateView):
+    model = models.Equipment
+    fields = "__all__"
+
+    def valid_form(self, form):
+        form.instance.author = self.request.user
+        return super().valid_form(form)
 
 def about(request):
     return render(request, "gym/about.html", {'title': 'About Us | FlowFitness'})

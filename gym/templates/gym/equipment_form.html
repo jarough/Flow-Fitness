@@ -1,0 +1,23 @@
+{% extends 'gym/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-5">Add Message</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group py-4">
+            <input class="btn btn-outline-primary" type="submit" value="Submit">
+        </div>
+    </form>
+
+    <div class="border-top pt-2">
+        <a href="{% url 'gym-home' %}">Cancel</a>
+    </div>
+</div>
+
+{% endblock content %}

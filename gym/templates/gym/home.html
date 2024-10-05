@@ -8,7 +8,7 @@
         <h5 class="card-title">{{ equipment.name }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">£{{ equipment.price }}</h6>
         <p class="card-text">{{ equipment.equipment_id }}</p>
-        <a href="#" class="card-link">View Product</a>
+        <a href="{% url 'gym-details' equipment.pk %}" class="card-link">View Product</a>
     </div>
 </div>
 {% endfor %}
