@@ -1,0 +1,16 @@
+{% extends 'gym/base.html' %}
+
+{% block content %}
+<h1>Gym App Home</h1>
+{% for equipment in equipment %}
+<div class="card my-4" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{ equipment.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">£{{ equipment.price }}</h6>
+        <p class="card-text">{{ equipment.equipment_id }}</p>
+        <a href="#" class="card-link">View Product</a>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock content %}
