@@ -1,1 +1,1 @@
-web: gunicorn flow-fitness.wsgi
+web: gunicorn Flow-Fitness.wsgi
