@@ -11,4 +11,11 @@
     </div>
 </div>
 
+{% if object.author == user or user.is_staff %}
+<div class="col-4">
+    <a class="btn-outline-primary" href="{% url 'gym-update' object.id %}">Update</a>
+    <a class="btn-outline-danger" href="{% url 'gym-delete' object.id %}">Delete</a>
+</div>
+{% endif %}
+
 {% endblock content %}

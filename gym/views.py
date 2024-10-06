@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse
-from django.views.generic import ListView, DetailView, CreateView, UpdateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.urls import reverse_lazy
 from . import models
 
 # Create your views here.
@@ -29,13 +30,26 @@ class EquipmentCreateView(LoginRequiredMixin, CreateView):
         form.instance.author = self.request.user
         return super().valid_form(form)
 
-class EquipmentUpdateView(LoginRequiredMixin, UpdateView):
+class EquipmentUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = models.Equipment
     fields = "__all__"
+
+    def test_func(self):
+        gym = self.get_object()
+        return self.request.user == gym.author
 
     def valid_form(self, form):
         form.instance.author = self.request.user
         return super().valid_form(form)
 
+class EquipmentDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = models.Equipment
+    success_url = reverse_lazy('gym-home')
+
+    def test_func(self):
+        gym = self.get_object()
+        return self.request.user == gym.author
+
+    
 def about(request):
     return render(request, "gym/about.html", {'title': 'About Us | FlowFitness'})
