@@ -1,1 +1,1 @@
-web: gunicorn djheroku_project.wsgi
+web: gunicorn flow-fitness.wsgi
