@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure--h$vfh9s79ow21u3gfc#08ol0*p+wzql-r^$ra8r256^(%086^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['flow-fitness-2dec3bfd3801.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'flow-fitness-2dec3bfd3801.herokuapp.com']
 
 
 # Application definition
