@@ -23,12 +23,12 @@
 ## UX Design
 
 ### Project Goals
-My goal from this project is to establish a gym management system for a local business to utilise. This system will include various features such as user profiles and a text wall to post about individual successes, as well as subscription models to name a few.
+My goal from this project is to establish a gym shop management system for a local business to utilise. This system will include various features such as user profiles and a text wall to post about individual successes, as well as iteme purchases to name a few.
 
 The goals for the site user are:
-* Have the ability to join a create an account and join a fitness group.
+* Have the ability to create an account and join a fitness group.
 * To be able to review and join personalised exercise plans for a subscription fee.
-* To have the option to purchase merchandise and gym equipment for use at home.
+* To have the option to purchase gym equipment for use at home.
 
 The goals for the site owner are:
 * To be able to generate fitness groups based on how many people subscribe to a certain model.
@@ -108,6 +108,8 @@ To clone this project:
 5. Change the working directory to the location you want the cloned directory
 6. Type 'git clone' followed by the URL you copied
 7. Press **Enter** to create the clone.
+
+This project was deployed onto Heroku through the following [link](https://flow-fitness-2dec3bfd3801.herokuapp.com/) 
 
 
 
