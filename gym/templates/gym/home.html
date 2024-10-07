@@ -1,4 +1,5 @@
 {% extends 'gym/base.html' %}
+{% load static %}
 
 {% block content %}
 {% for equipment in equipment %}
@@ -7,7 +8,7 @@
         <div class="row gx-4 gx-lg-4 row-cols-xl-4 justify-content-center">
             <div class="col mb-4">
                 <div class="card h-100">
-                    <img class="card-img-top" src="/static/images/2151114229.jpg" alt="Treadmill">
+                    <img class="card-img-top" src="{% static 'images/2151114229.jpg' %}" alt="Treadmill">
                     <div class="card-body p-3">
                         <div class="text-center">
                             <h5 class="card-title">{{ equipment.name }}</h5>
