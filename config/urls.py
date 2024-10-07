@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from userreg import views as userviews
 from django.contrib.auth import views as authviews
+from products import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +26,7 @@ urlpatterns = [
     path('profile/', userviews.profile, name="user-profile"),
     path('login/', authviews.LoginView.as_view(template_name="userreg/login.html"), name="user-login"),
     path('logout/', authviews.LogoutView.as_view(template_name="userreg/logout.html"), name="user-logout"),
-]
+    path('success/', views.success, name='success'),
+    path('cancel/', views.cancel, name='cancel'),
+    path('home/', views.home, name='home'),
+]   

@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     #site apps
     'gym',
     'userreg',
+    'products',
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,6 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'gym-home'
 LOGIN_URL = 'user-login'
+
+STRIPE_PUBLIC_KEY = "pk_test_51Q7OVCRxXLdDJRO7B7cFJpRMS9N6r84WJSjiO46zupgcN55TKAHMiayNLcgmVVvYi03DMr8AwSomi4R2vq6omrLC00mg07Wd9l"
+STRIPE_SECRET_KEY = "sk_test_51Q7OVCRxXLdDJRO7mRW62qsUxLokMNAryBIcqDq2Vk9VziLHsZzIUgoTnlc152sYr00KLdBVTI0pq5IxMkDx75Eo00DLrl3Gik"
