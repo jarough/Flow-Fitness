@@ -1,5 +1,12 @@
 {% extends 'gym/base.html' %}
+{% load static %}
 
 {% block content %}
-<h1>About Us</h1>
+<h1 class="my-4 text-center">About Us</h1>
+<br>
+<p class="text-center" style="font-size: x-large;">We are the leading online marketplace for purchasing and distributing gym equipment for home use.
+    From smaller products such as weights to larger machines such as treadmills, we have a wide range suitable for all types of members.</p>
+    <!-- <div class="container h-100"> -->
+        <img style="display: block; margin-left: auto; margin-right: auto; width: 50%;" src="{% static 'images/2151114237.jpg' %}" alt="Weights">
+    <!-- </div> -->
 {% endblock content %}
