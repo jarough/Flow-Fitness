@@ -36,7 +36,7 @@ class EquipmentUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         gym = self.get_object()
-        return self.request.user == gym.author
+        return self.request.user == gym.creator
 
     def valid_form(self, form):
         form.instance.author = self.request.user
@@ -48,7 +48,7 @@ class EquipmentDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         gym = self.get_object()
-        return self.request.user == gym.author
+        return self.request.user == gym.creator
 
     
 def about(request):

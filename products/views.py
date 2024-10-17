@@ -14,6 +14,11 @@ def home(request):
             {
             "price": "price_1Q7OZJRxXLdDJRO7EVt8nGmp",
             "quantity": 1,
+            "adjustable_quantity": {
+                "enabled": True,
+                "minimum": 1,
+                "maximum": 99,
+            },
             }
         ],
         mode="payment",
